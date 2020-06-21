@@ -7,7 +7,9 @@ body {
     padding: 10px;
     background: #f1f1f1;
 }
-
+.this-page{
+    background-color: rgba(170, 170, 170, 0.45);
+}
 /* Заголовок / Название Блога */
 .header {
     padding: 30px;
