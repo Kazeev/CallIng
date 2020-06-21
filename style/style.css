@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Заголовок / Название Блога */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Стиль верхней панели навигации */
+.topnav {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Стиль верхних навигационных ссылок */
+.topnav a {
+
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Изменение цвета при наведении */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Создайте две неравные колонки, которые плавают рядом друг с другом */
+/* Левая колонка */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Правая колонка */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+.card iframe{
+    width: 100%;
+}
+/* Поддельные изображения */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 1%;
+}
+.exile a{
+    text-align: center;
+    text-decoration: none;
+}
+/* Добавление эффекта карточки для статей */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Очистить поплавки после колонн */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Нижний колонтитул */
+.footer {
+    padding: 20px;
+    flex: inherit;
+    text-align: center;
+    background: #ffffff;
+    margin-top: 20px;
+}
+
+/* Отзывчивый макет  -когда экран меньше, чем 800px широкий, сделать два столбца стека друг на друга, а не рядом друг с другом */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Отзывчивый макет - когда экран меньше, чем 400px широкий, сделать навигационные ссылки стек поверх друг друга, а не рядом друг с другом */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
