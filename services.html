@@ -7,63 +7,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="style/style.css" rel="stylesheet">
     <title>Document</title>
+    <script src="js.js"></script>
 </head>
-<body>
+<body class="wrapper">
     <div class="topnav">
         <a href="index.html">Главная</a>
-        <a href="services.html" class="this-page" >Услуги</a>
-        <a href="working.html">Наши работы</a>
+        <a href="services.html" class="this-page" >Зарегистрироваться на конференцию</a>
         <a href="info.html" style="float:right">О нас</a>
     </div>
 
     <div class="row">
-        <div class="leftcolumn">
-            <div class="card">
-                <h2>1</h2>
-                <h5>Заголовок описание, Ноябрь 7, 2018</h5>
-                <div class="fakeimg" style="height:200px;">Изображение</div>
-                <p>Некоторый текст..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
-            <div class="card">
-                <h2>2</h2>
-                <h5>Заголовок описание, Ноябрь 7, 2018</h5>
-                <div class="fakeimg" style="height:200px;">Изображение</div>
-                <p>Некоторый текст..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
-            <div class="card">
-                <h2>3</h2>
-                <h5>Заголовок описание, Ноябрь 7, 2018</h5>
-                <div class="fakeimg" style="height:200px;">Изображение</div>
-                <p>Некоторый текст..</p>
-                <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-            </div>
-            <div class="card">
-                <h2>4</h2>
-                <h5>Заголовок описание, Ноябрь 7, 2018</h5>
-                <div class="fakeimg" style="height:200px;">Изображение</div>
-                <p>Некоторый текст..</p>
-            </div>
+        <div class="leftcolumn-form">
+            <form  onsubmit="insertData();">
+                <div class="card ">
+                    <h2>Регестрация на конференцию</h2>
+                    <h5>Регестрация на конференцию : Ноябрь 7, 2021</h5>
+                    <input class="center" id="lastname" name="lastname" type="text" placeholder="Имя" required>
+                    <input class="center" name="firstname" type="text" placeholder="Фамилия" required>
+                    <input class="center" name="telephone" type="tel" placeholder="Номер телефона" required>
+                    <input class="center" name="email" type="email" placeholder="Почта" required>
+                    <select class="center" name="student" class="turnintodropdown" >
+                        <option value="">Вы студент?</option>
+                        <option value="Да">Да</option>
+                        <option value="Нет">Нет</option>
+
+                    </select>
+                    <input class="center" name="city" type="text" placeholder="Город" required>
+
+
+                    <input class="center" type="submit" value="Зарегестрироваться" >
+               </div>
+            </form>
         </div>
-        <div class="rightcolumn">
+
+        <div class="rightcolumn-form">
+
             <div class="card">
-                <h3>Наши партнёры</h3>
-                <div class="fakeimg"><p>Трали вали</p></div>
-                <div class="fakeimg"><p>Трали вали</p></div>
-                <div class="fakeimg"><p>Трали вали</p></div>
-            </div>
-            <div class="card exile">
-                <h3>Мы в соц.сетях</h3>
-                <a href="#"><p>VK</p></a>
-                <a href="#"><p>Mail</p></a>
-                <a href="#"><p>Instagram</p></a>
+                <h3>Участники</h3>
+                <table  id='tbody01' style="border: 1px solid black;">
+                    <tr>
+                        <th>Номер в списке</th>
+                        <th>Имя</th>
+                        <th>Фамилия</th>
+                        <th>Номер телефона</th>
+                        <th>Почта</th>
+                    </tr>
+                </table>
+
+
+
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <p>Трали вали 8(985)123-123</p>
+        <p>ООО "Мы тут ни причём"</p>
     </div>
 </body>
 </html>

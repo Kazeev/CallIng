@@ -1,11 +1,13 @@
 * {
     box-sizing: border-box;
+
 }
 
 body {
     font-family: Arial;
     padding: 10px;
     background: #f1f1f1;
+
 }
 .this-page{
     background-color: rgba(170, 170, 170, 0.45);
@@ -61,12 +63,36 @@ body {
     background-color: #f1f1f1;
     padding-left: 20px;
 }
+.leftcolumn-form {
+
+    float: left;
+    width: 50%;
+    position: relative
+}
+.center{
+    position: relative;
+    left: 35%;
+}
+
+.rightcolumn-form {
+    float: left;
+    width: 50%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+
+}
 .card iframe{
     width: 100%;
 }
+
+.center-pic{
+    display:block;
+    width: 100%;
+    margin:auto;
+}
 /* Поддельные изображения */
 .fakeimg {
-    background-color: #aaa;
+    /*background-color: #aaa;*/
     width: 100%;
     padding: 20px;
     margin-bottom: 1%;
@@ -77,13 +103,16 @@ body {
 }
 /* Добавление эффекта карточки для статей */
 .card {
+
     background-color: white;
     padding: 20px;
     margin-top: 20px;
+
 }
 
 /* Очистить поплавки после колонн */
 .row:after {
+
     content: "";
     display: table;
     clear: both;
@@ -91,16 +120,19 @@ body {
 
 /* Нижний колонтитул */
 .footer {
+    
     padding: 20px;
     flex: inherit;
     text-align: center;
     background: #ffffff;
     margin-top: 20px;
+
+
 }
 
 /* Отзывчивый макет  -когда экран меньше, чем 800px широкий, сделать два столбца стека друг на друга, а не рядом друг с другом */
 @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
+    .leftcolumn, .rightcolumn ,.leftcolumn-form,.rightcolumn-form{
         width: 100%;
         padding: 0;
     }
@@ -112,4 +144,151 @@ body {
         float: none;
         width: 100%;
     }
+}
+
+/*------------------------------*/
+input, select {
+
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display:block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    display:block;
+    width: 25%;
+    background-color: #c9c8c8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #9b9a9a;
+}
+dropcontainer {
+    position:relative;
+    font-size: 16px;
+    color: #777;
+}
+
+.trigger {
+    color: #777;
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    display: block;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.trigger:hover {
+    color: #777;
+}
+
+.activetrigger {
+    color: #777;
+    padding: 10px;
+    font-size: 16px;
+    width: 50%;
+    display: block;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.activetrigger:hover {
+    color: #777;
+}
+
+.activetrigger:active {
+    color: #777;
+}
+
+.dropcontainer ul {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-top: none;
+    background: #fff;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    width: 50%;
+    z-index: 100;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.dropcontainer ul li {
+    padding: 5px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.dropcontainer ul li:hover {
+    background: #f5f5f5;
+    outline: none;
+}
+
+.dropcontainer ul li:first-child {
+    display: none;
+}
+
+.dropcontainer ul li:last-child {
+    border-bottom: none;
+}
+
+.dropdownhidden {
+    display: none;
+}
+
+.dropdownvisible {
+    height: auto;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    float: left;
+
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: #333333;
+}
+td{
+
+    border: 1px solid black;
+    background-color: #ffffff;
+}
+th {
+    background-color: #333333;
+    color: white;
+}
+
+@media(max-width: 1366px) {
+    th, td {
+        font-size: 10px;
+    }
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
